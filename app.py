@@ -78,12 +78,7 @@ fig = px.line(forecast_aqi, x='ds', y='yhat', title='AQI Forecast')
 fig.add_scatter(x=df['ds'], y=df['AQI'], mode='lines', name='Historical')
 
 # Optional: add confidence interval bounds
-fig.add_scatter(x=forecast_aqi['ds'], y=forecast_aqi['yhat_lower'],
-                mode='lines', line=dict(dash='dot', color='gray'),
-                name='Lower bound')
-fig.add_scatter(x=forecast_aqi['ds'], y=forecast_aqi['yhat_upper'],
-                mode='lines', line=dict(dash='dot', color='gray'),
-                name='Upper bound')
+
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -91,6 +86,7 @@ st.info("""
 Note: AQI is extremely chaotic, like a rebellious teenager.  
 Predictions have an expected error of roughly ±20 points. Take it with a pinch of salt!
 """)
+
 
 
 
