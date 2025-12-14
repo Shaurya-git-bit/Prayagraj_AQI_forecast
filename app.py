@@ -88,8 +88,9 @@ fig.add_scatter(x=forecast_aqi['ds'], y=forecast_aqi['yhat_upper'],
 st.plotly_chart(fig, use_container_width=True)
 
 st.info("""
-Note: AQI is extremely chaotic, like a rebellious teenager 🤯.  
+Note: AQI is extremely chaotic, like a rebellious teenager.  
 Predictions have an expected error of roughly ±20 points. Take it with a pinch of salt!
 """)
+
 
 
